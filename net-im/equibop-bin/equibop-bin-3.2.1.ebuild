@@ -34,7 +34,6 @@ RDEPEND="
 	dev-libs/nss
 	dev-libs/nspr
 	media-libs/alsa-lib
-	cups? ( net-print/cups )
 "
 DEPEND="${RDEPEND}"
 
