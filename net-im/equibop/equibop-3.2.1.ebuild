@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
-S="${WORKDIR}/equibop-${PV}"
+S="${WORKDIR}/${PN_SERVER}-${PV}"
 
 BDEPEND="
 	dev-lang/bun-bin
@@ -57,6 +57,7 @@ QA_PREBUILT="
 
 src_unpack() {
 	default
+	S=$(find "${WORKDIR}" -maxdepth 1 -type d ! -name "empty" ! -name "work" | head -n 1)
 }
 
 src_prepare() {
