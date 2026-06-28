@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
-S="${WORKDIR}/${PN_SERVER}-${PV}"
+S="${WORKDIR}/Equibop-${PV}"
 
 BDEPEND="
 	dev-lang/bun-bin
@@ -54,11 +54,6 @@ QA_PREBUILT="
 	usr/share/equibop/libvk_swiftshader.so
 	usr/share/equibop/libvulkan.so.1
 "
-
-src_unpack() {
-	default
-	S=$(find "${WORKDIR}" -maxdepth 1 -type d ! -name "empty" ! -name "work" | head -n 1)
-}
 
 src_prepare() {
 	default
