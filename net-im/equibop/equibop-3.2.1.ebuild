@@ -14,6 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 RESTRICT="network-sandbox"
 
+S="${WORKDIR}/Equibop-${PV}"
+
 BDEPEND="
 	dev-lang/bun-bin
 	net-libs/nodejs
