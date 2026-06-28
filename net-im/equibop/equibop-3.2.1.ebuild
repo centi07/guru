@@ -12,8 +12,7 @@ SRC_URI="https://github.com/Equicord/Equibop/archive/refs/tags/v${PV}.tar.gz -> 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-
-S="${WORKDIR}/Equibop-${PV}"
+RESTRICT="network-sandbox"
 
 BDEPEND="
 	dev-lang/bun-bin
