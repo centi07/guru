@@ -13,10 +13,10 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
-S="${WORKDIR}/Equibop-${PV}"
+S="${WORKDIR}/equibop-${PV}"
 
 BDEPEND="
-	dev-lang/bun-bin
+	dev-lang/bun
 	net-libs/nodejs
 	sys-devel/gcc
 	dev-build/cmake
