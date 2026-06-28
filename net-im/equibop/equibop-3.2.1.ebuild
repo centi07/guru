@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~arm64"
 S="${WORKDIR}/Equibop-${PV}"
 
 BDEPEND="
-	dev-lang/bun
+	dev-lang/bun-bin
 	net-libs/nodejs
 	sys-devel/gcc
 	dev-build/cmake
