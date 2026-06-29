@@ -37,6 +37,8 @@ done
 IUSE="${IUSE_FONTS} +nerdfontssymbolsonly"
 REQUIRED_USE="|| ( ${IUSE_FONTS} )"
 
+S="${WORKDIR}"
+
 FONT_SUFFIX=""
 
 src_install() {
