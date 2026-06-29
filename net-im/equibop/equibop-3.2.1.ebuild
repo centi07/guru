@@ -64,11 +64,13 @@ src_prepare() {
 
 src_compile() {
 	export SKIP_BUN_DOWNLOAD=true
-	export CI=true
 	
 	bun install || die
 	bun run buildLibVesktop || die
-	bun run package:dir || die
+	
+	# Blokujemy automatyczne próby wypychania paczki do sieci przez electron-builder
+	export CI=false
+	bun run package:dir -- --publish never || die
 }
 
 src_install() {
